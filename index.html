@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Invitación Bautizo</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --main-font: 'Playfair Display', serif;
+      --pastel-blue-light: #d9e8f5;
+      --pastel-blue-medium: #a6c9e2;
+      --pastel-blue-dark: #6fa6d1;
+      --text-color: #2c3e50;
+      --accent-color: #8eb7e3;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--main-font);
+      background: linear-gradient(var(--pastel-blue-light), var(--pastel-blue-medium));
+      text-align: center;
+      padding: 20px;
+      color: var(--text-color);
+      overflow-x: hidden;
+    }
+
+    .container {
+      background: #ffffff9d;
+      border-radius: 30px;
+      border: 3px dotted var(--pastel-blue-dark);
+      padding: 30px;
+      max-width: 600px;
+      width: 100%;
+      margin: 20px auto;
+      box-shadow: 0 0 20px rgba(138, 180, 248, 0.3);
+      position: relative;
+      z-index: 1;
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(60px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    h1, p, .family, a {
+      animation: fadeInUp 2.5s ease-out forwards;
+      opacity: 0;
+    }
+
+    h1 {
+      animation-delay: 0.2s;
+      font-size: 2.5em;
+      color: var(--pastel-blue-dark);
+      text-shadow: 2px 2px #ffffff;
+    }
+
+    p:nth-of-type(1) { animation-delay: 0.6s; }
+    p:nth-of-type(2) { animation-delay: 0.9s; }
+    p:nth-of-type(3) { animation-delay: 1.2s; }
+    p:nth-of-type(4) { animation-delay: 1.5s; }
+    .family { animation-delay: 1.8s; }
+    a { animation-delay: 2.1s; }
+
+    p {
+      font-size: 1.2em;
+      color: var(--text-color);
+      margin: 10px 0;
+    }
+
+    .bee-sticker {
+      width: 100%;
+      max-width: 480px;
+      height: auto;
+      animation: bounce 3s infinite;
+    }
+
+    .confirm-btn {
+      background: var(--accent-color);
+      color: white;
+      padding: 20px 40px;
+      border-radius: 50px;
+      display: inline-block;
+      text-decoration: none;
+      font-size: 1em;
+      margin-top: 30px;
+      transition: all 0.3s ease;
+      border-style: dashed;
+    }
+
+    .confirm-btn:hover {
+      background: var(--pastel-blue-dark);
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .family {
+      background: var(--pastel-blue-light);
+      border: 2px dashed var(--accent-color);
+      border-radius: 20px;
+      padding: 20px;
+      margin: 20px 0;
+      box-shadow: 0 0 10px rgba(138, 180, 248, 0.2);
+      color: var(--text-color);
+    }
+
+    .family p {
+      font-size: 1em;
+      margin: 10px 0;
+    }
+
+    a {
+      color: var(--text-color);
+      text-decoration: underline;
+    }
+
+    .flying-bees img,
+    .floating-flowers img {
+      position: absolute;
+      z-index: 0;
+      opacity: 0.7;
+      pointer-events: none;
+      animation: float 3s ease-in-out infinite;
+      max-width: 20vw;
+    }
+
+    .bee1 { top: 10%; left: 5%; transform: rotate(20deg); }
+    .bee2 { top: 30%; left: 80%; transform: rotate(-15deg); }
+    .bee3 { top: 60%; left: 10%; transform: rotate(40deg); }
+    .bee4 { top: 85%; left: 70%; transform: rotate(-30deg); }
+    .bee5 { top: 45%; left: 50%; transform: rotate(10deg); }
+
+    .flower1 { top: 20%; left: 15%; animation-delay: 0s; }
+    .flower2 { top: 40%; left: 70%; animation-delay: 2s; }
+    .flower3 { top: 75%; left: 20%; animation-delay: 4s; }
+    .flower4 { top: 55%; left: 85%; animation-delay: 6s; }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-15px) rotate(10deg); }
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 1.8em; }
+      p { font-size: 1em; }
+      .confirm-btn { padding: 15px 30px; font-size: 1em; }
+      .container { padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="flying-bees">
+    <img src="Media/input.jpg" class="bee1" alt="Bee" />
+    <img src="Media/input.jpg" class="bee2" alt="Bee" />
+    <img src="Media/input.jpg" class="bee3" alt="Bee" />
+    <img src="Media/input.jpg" class="bee5" alt="Bee" />
+    <img src="Media/input.jpg" class="bee2" alt="Bee" />
+    <img src="Media/input.jpg" class="bee4" alt="Bee" />
+  </div>
+
+  <div class="floating-flowers">
+    <img src="Media/flor.jpg" class="flower1" alt="Flor" />
+    <img src="Media/flor.jpg" class="flower2" alt="Flor" />
+    <img src="Media/flor.jpg" class="flower3" alt="Flor" />
+    <img src="Media/flor.jpg" class="flower4" alt="Flor" />
+  </div>
+
+  <div class="container">
+    <h1><img src="Media/teinvito.png" style="width: 200px;" alt=""></h1>
+    <img src="Media/logo.PNG" class="bee-sticker" alt="Abejita Chiquitita" />
+    <img src="Media/gracias.png" alt="Gracias" style="width: 100%; max-width: 300px; height: auto;">
+    <p>A Dios nuestro Señor por darme el don de la vida.</p>
+    <p>A mis padres por esperar mi llegada con mucho amor y recibirme con alegría.</p>
+    <p>A mis padrinos por aceptar guiarme a un camino de luz y sabiduría.</p>
+    <p>Y a ti por acompañarme en cada uno de los días más importantes de mi vida.</p>
+
+    <div class="family">
+      <p><strong>Mis papás:</strong></p>
+      <p>Karla Patricia López Machain <br>y<br> Cesar Fernando Silva Martínez</p>
+
+      <p><strong>Mis padrinos:</strong></p>
+      <p>María del Carmen Vázquez Ruvalcaba <br />y<br /> Alejandro Pineda Salazar</p>
+      <img style="width: 200px;" src="Media/cruz.jpg" alt="">
+    </div>
+
+    <a href="details.html" target="_blank" class="confirm-btn">Siguiente</a>
+  </div>
+</body>
+</html>
